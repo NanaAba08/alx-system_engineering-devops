@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Set the server hostname or IP address
+server="18.208.119.113"
+
+# Set the private key file
+keyfile="~/.ssh/school"
+
+# Set the SSH user
+user="ubuntu"
+
+# Use the 'i' flag to specify the identity (private key) file
+ssh -i $keyfile $user@$server
