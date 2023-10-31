@@ -6,7 +6,7 @@ file { '/etc/ssh/ssh_config':
   content => "
     #SSH client configuration
     host
-        HostName 54.144.133.122
+        HostName 3.85.141.192
         User ubuntu
         IdentityFile ~/.ssh/school
         PasswordAuthentication no
