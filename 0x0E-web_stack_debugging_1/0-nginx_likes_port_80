@@ -1,25 +1,14 @@
 #!/usr/bin/env bash
-# Configures an Nginx server on Ubuntu 20.04 LTS
+# This script ensures Nginx is running and listening on port 80 for all active IPv4 IPs.
+# Delete the existing ../sites-enabled/default and replacing it with a copy of
+# ../sites-available/default. This is done by creating a symbolic link.
+# Note: The flag -s creates a symbolic link, -f deletes the existing file and replaces it.
 
-# Update package information
-sudo apt update
+# Remove existing symbolic link to default configuration
+sudo rm -f /etc/nginx/sites-enabled/default
 
-# Install Nginx if not installed
-sudo apt install -y nginx
+# Create a new symbolic link to the default configuration
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-# Check if Nginx is running
-if ! systemctl is-active --quiet nginx; then
-    sudo systemctl start nginx
-fi
-
-# Check if Nginx is listening on port 80
-if ! sudo netstat -tulpn | grep -q :80; then
-
-    # Update Nginx configuration
-    sudo sed -i 's/listen 80;/listen 80;/g' /etc/nginx/sites-available/default
-
-    # Restart Nginx
-    sudo systemctl restart nginx
-fi
-
-echo "Nginx is now configured to listen on port 80."
+# Restart Nginx to apply the changes
+sudo service nginx restart
