@@ -1,0 +1,44 @@
+The Journey of a Web Request:
+
+Ever wondered what happens when you type Google.com in your browser and hit enter. This may seem as a simple and direct step but there are quite a number of complex events that take place behind the scenes. This article seeks to try to break down the steps and appreciate the Journey of a web request and the processes involved in this action.
+
+DNS Request:
+When you type "https://www.google.com" into your browser, the first step is resolving the domain name into an IP address. This involves a DNS (Domain Name System) request.
+Your browser communicates with a DNS resolver, typically provided by your ISP or a third-party service, to obtain the IP address associated with "www.google.com."
+
+TCP/IP:
+Once the IP address is retrieved, the browser initiates a Transmission Control Protocol (TCP) connection with that IP address. Internet Protocol (IP) then facilitates the actual data transfer.
+
+Firewall:
+The data packets containing the request might pass through firewalls, which are security measures designed to control and filter incoming and outgoing network traffic. Firewalls can be in place at various levels, from personal systems to corporate networks.
+
+HTTPS/SSL:
+For a secure connection, HTTPS (Hypertext Transfer Protocol Secure) is used. This involves SSL/TLS (Secure Sockets Layer/Transport Layer Security) encryption to secure the communication between your browser and the server.
+
+Load Balancer:
+Large-scale websites like Google often use load balancers to distribute incoming traffic across multiple servers. This ensures efficient resource utilization and prevents overload on a single server.
+
+Web Server:
+After passing through the load balancer, the request reaches a web server. In Google's case, there may be numerous servers hosting different parts of the website.
+
+Application Server:
+If there are dynamic elements (like search queries or user-specific content), an application server may handle these requests. It interacts with databases and other resources to generate the required content.
+
+Database:
+In cases where the request involves fetching specific data, an application server communicates with a database server to retrieve the necessary information.
+
+Response and Rendering:
+Finally, the server(s) compile the requested data/content, and the browser receives this information. The browser then interprets the received data, renders the HTML, CSS, and JavaScript, and displays the Google search page you requested.
+This sequence of steps happens in milliseconds and involves numerous complex processes orchestrated seamlessly to provide users with the requested webpage.
+
+In the blink of an eye, these intricate processes unfold to deliver a seamless browsing experience. Behind every click lies a sophisticated web of technologies working harmoniously to bring the digital world to your fingertips. Understanding this journey not only demystifies the complexity of web interactions but also underscores the marvels of technology that shape our online experiences. Next time you press Enter after typing a URL, remember the fascinating journey your request embarks upon.
+
+The world of web technology is vast and continually evolving. Each step in this process holds depths waiting to be explored. By comprehending these intricacies, we gain a deeper appreciation for the technology powering the internet as we know it.
+
+Feel free to dive deeper into each step, explore protocols, discuss real-world implementations, and unravel more about the fascinating world of web interactions.
+
+Keep exploring, keep learning, and embrace the wonders of the digital realm!
+
+Blog Post by [Elizabeth Aba Williams]
+
+Read more at: [https://www.linkedin.com/in/elizabeth-aba-williams-ca-08ba8367/]
